@@ -17,9 +17,10 @@ gen TotalTillagelag = TotalTillage - TotalTillage[_n-1]
 gen lProductionlag =ln( Productionlag)
 gen lOccupiedPeoplelag = ln( OccupiedPeoplelag)
 gen lTotalTillagelag = ln( TotalTillagelag)
+gen lTFP = ln(TFP)
 
 // No restrictions
-xtivreg lProduction  (lTotalTillage = lPIA lAnnualInvestment lCapitalStock TangarádaSerra Diamantino Cáceres PonteseLacerdaComodoro MirassolDoeste Sinop Sorriso Juína AltaFloresta PeixotodeAzevedoGuarantãdo Juara BarradoGarças ConfresaVilaRica ÁguaBoa Rondonópolis PrimaveradoLeste Jaciara year1980 year1985 year1995 year2006), re vce(robust)
+xtivreg lProduction  (lTotalTillage = lTFP lPIA lAnnualInvestment lCapitalStock TangarádaSerra Diamantino Cáceres PonteseLacerdaComodoro MirassolDoeste Sinop Sorriso Juína AltaFloresta PeixotodeAzevedoGuarantãdo Juara BarradoGarças ConfresaVilaRica ÁguaBoa Rondonópolis PrimaveradoLeste Jaciara year1980 year1985 year1995 year2006), re vce(robust)
 predict yhatsr, xb
 gen yhatsrcontrole = yhatsr*2006
 reg lProduction yhatsrcontrole, robust
@@ -29,7 +30,7 @@ sum ressrsq
 
 //Excluding 2006
 drop if Ano>1995
-xtivreg lProduction ( lTotalTillage = lPIA lAnnualInvestment lCapitalStock TangarádaSerra Diamantino Cáceres PonteseLacerdaComodoro MirassolDoeste Sinop Sorriso Juína AltaFloresta PeixotodeAzevedoGuarantãdo Juara BarradoGarças ConfresaVilaRica ÁguaBoa Rondonópolis PrimaveradoLeste Jaciara year1980 year1985 year1995), re vce(robust)
+xtivreg lProduction ( lTotalTillage = lTFP lPIA lAnnualInvestment lCapitalStock TangarádaSerra Diamantino Cáceres PonteseLacerdaComodoro MirassolDoeste Sinop Sorriso Juína AltaFloresta PeixotodeAzevedoGuarantãdo Juara BarradoGarças ConfresaVilaRica ÁguaBoa Rondonópolis PrimaveradoLeste Jaciara year1980 year1985 year1995), re vce(robust)
 predict yhat95, xb
 gen yhat95controle = yhat95*2006
 reg lProduction yhat95controle, robust
@@ -57,9 +58,10 @@ gen TotalTillagelag = TotalTillage - TotalTillage[_n-1]
 gen lProductionlag =ln( Productionlag)
 gen lOccupiedPeoplelag = ln( OccupiedPeoplelag)
 gen lTotalTillagelag = ln( TotalTillagelag)
+gen lTFP = ln(TFP)
 
 drop if Ano<2006
-ivreg lProduction ( lTotalTillage = lPIA lAnnualInvestment lCapitalStock TangarádaSerra Diamantino Cáceres PonteseLacerdaComodoro MirassolDoeste Sinop Sorriso Juína AltaFloresta PeixotodeAzevedoGuarantãdo Juara BarradoGarças ConfresaVilaRica ÁguaBoa Rondonópolis PrimaveradoLeste Jaciara), robust
+ivreg lProduction ( lTotalTillage = lTFP lPIA lAnnualInvestment lCapitalStock TangarádaSerra Diamantino Cáceres PonteseLacerdaComodoro MirassolDoeste Sinop Sorriso Juína AltaFloresta PeixotodeAzevedoGuarantãdo Juara BarradoGarças ConfresaVilaRica ÁguaBoa Rondonópolis PrimaveradoLeste Jaciara), robust
 predict yhat2006, xb
 gen yhat2006controle = yhat2006*2006
 reg lProduction  yhat2006controle, robust
