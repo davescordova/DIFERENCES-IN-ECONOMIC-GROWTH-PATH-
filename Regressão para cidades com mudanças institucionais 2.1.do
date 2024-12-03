@@ -17,6 +17,7 @@ gen TotalTillagelag = TotalTillage - TotalTillage[_n-1]
 gen lProductionlag =ln( Productionlag)
 gen lOccupiedPeoplelag = ln( OccupiedPeoplelag)
 gen lTotalTillagelag = ln( TotalTillagelag)
+gen lTFP =ln(TFP)
 drop TangarádaSerra Diamantino Cáceres PonteseLacerdaComodoro MirassolDoeste Sinop Sorriso Juína AltaFloresta PeixotodeAzevedoGuarantãdo Juara BarradoGarças ConfresaVilaRica ÁguaBoa Rondonópolis PrimaveradoLeste Jaciara AG IntBarradoGarças IntCáceres IntRondonópolis IntSinop 
 
 ///Only cities with institutional changes
@@ -24,8 +25,8 @@ keep if Município == "Porto dos Gaúchos" | Município == "Canarana" | Municíp
 
 //TotalTillage to independent variables
 //PIA
-xtreg lTotalTillage lPIA lAnnualInvestment lCapitalStock year1980 year1985 year1995 year2006, re vce(robust)
+xtreg lTotalTillage lTFP lPIA lAnnualInvestment lCapitalStock year1980 year1985 year1995 year2006, re vce(robust)
 
 //Production function
-xtivreg lProduction ( lTotalTillage = lPIA lAnnualInvestment lCapitalStock year1980 year1985 year1995 year2006), re vce(robust)
+xtivreg lProduction ( lTotalTillage = lTFP lPIA lAnnualInvestment lCapitalStock year1980 year1985 year1995 year2006), re vce(robust)
 
