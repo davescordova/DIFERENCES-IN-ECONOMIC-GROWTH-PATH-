@@ -11,7 +11,7 @@ davescordova-Production---Regression-Analysis: Here, the data and the Stata code
 
 davescordova--Exploratory-Statistics: Here, the Python codes for exploratory statistics were stored.
 
-davescordova-Graphs: In it, the codes for the graphs and the data to plot them were stored.
+davescordova-Graphs: In it, the Python and Julia codes for the graphs and the data to plot them were stored.
 
 
 Any missing data or doubt can be adressed to daves.cordova@gmail.com.
