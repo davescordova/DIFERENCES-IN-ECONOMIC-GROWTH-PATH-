@@ -5,7 +5,13 @@ The data is based on the file Base de dados - Regressão.xlsx to make the regres
 The specification is shown at the do-files as also the texts.
 Furthermore, there are Jupyter Notebooks files writen in Julia, which were used to plot the locations and the data, and also in Python, which are used to make both maps and graphs.
 
-They can be achieved through the main branch, but are divided trough five other branches:
-The davescordova-patch-data contain all the data used, while davescordova-patch-Stata-Graphs cointain the outdated graphs made in Stata.
-In davescordova-patch-Do-files is located the Stata do-files, in davescordova-patch-Julia there is the maps made in Julia and in davescordova-patch-Python there the up-to date graphs made in such language.
+They can be achieved through the main branch, but are divided trough other branches:
 
+davescordova-Production---Regression-Analysis: Here, the data and the Stata codes for regression were stored.
+
+davescordova--Exploratory-Statistics: Here, the Python codes for exploratory statistics were stored.
+
+davescordova-Graphs: In it, the codes for the graphs and the data to plot them were stored.
+
+
+Any missing data or doubt can be adressed to daves.cordova@gmail.com.
