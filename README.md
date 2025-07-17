@@ -1,6 +1,6 @@
 # Thesis: "Divergent Paths of Agricultural Economic Development in Mato Grosso"
 
-This repository contains all the data, code, and supplementary materials for my Master's thesis. 
+This repository contains all the data, code, and supplementary materials for my Master's thesis.
 
 **[Visit the thesis website for more details, interactive visualizations and the full content of the thesis](https://divergent-paths-of-agricultural-economic.onrender.com/)**
 
@@ -18,10 +18,8 @@ The analysis was conducted using a **Two-Stage Least Squares (2SLS)** model on p
 
 * **🐍 Python**: Used for creating maps, graphs, exploratory data analysis, and data visualizations.
     * *Key libraries: `pandas`, `geopandas`, `matplotlib`, `seaborn`, `plotly`, `esda`, `libpysal`.*
-
-* **💧 Julia**: Employed for plotting geospatial data, such as the location of federal highways in the state.
+* **💧🔴🟢🟣 Julia**: Employed for plotting geospatial data, such as the location of federal highways in the state.
     * *Key libraries: `GeoDataFrames`, `Plots`, `Shapefile`, `GeoJSON`, `ArchGDAL`.*
-
 * **📈 Stata**: Utilized for the core econometric regressions of the study.
 
 ---
@@ -41,12 +39,14 @@ All files are located in the `main` branch and organized into the following dire
 To replicate the analysis and results, please follow the steps below.
 
 ### 1. Prerequisites
+
 Ensure you have the following software installed:
-* Stata
+* Stata 16
 * Python 3.x (Anaconda distribution recommended)
-* Julia
+* Julia 1.11
 
 ### 2. Clone the Repository
+
 Open your terminal (Git Bash, Terminal, etc.) and run the command below to download the files:
 ```bash
 git clone [https://github.com/davescordova/DIFERENCES-IN-ECONOMIC-GROWTH-PATH-IN-MATO-GROSSO.git](https://github.com/davescordova/DIFERENCES-IN-ECONOMIC-GROWTH-PATH-IN-MATO-GROSSO.git)
