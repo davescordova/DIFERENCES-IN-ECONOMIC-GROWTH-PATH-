@@ -1,17 +1,52 @@
-  This Github stores not only the codes but also the data from my Master's thesis which will be placed here also, as soon as it will be published. 
-  Using Institutional Economy, the thesis prove that newer institutions in Mato Grosso, that came since the 1960s, paved the way to economic growth in Mato Grosso, Brazilian state.
+# Thesis: "Divergent Paths of Agricultural Economic Development in Mato Grosso"
 
-  The data is based on the file Base de dados - Regressão.xlsx to make the regressions in Stata, which lead to Two Stage Least Square Model in panel data with fixed effects.
-The specification is shown at the do-files as also the texts.
-  Furthermore, there are Jupyter Notebooks files writen in Julia, which were used to plot the locations and the data, and also in Python, which are used to make both maps and graphs.
+This repository contains all the data, code, and supplementary materials for my Master's thesis. 
 
-They can be achieved through the main branch, but are divided trough other branches:
+**[Visit the thesis website for more details, interactive visualizations and the full content of the thesis](https://divergent-paths-of-agricultural-economic.onrender.com/)**
 
-  davescordova-Production---Regression-Analysis: Here, the data and the Stata codes for regression were stored.
+---
 
-  davescordova--Exploratory-Statistics: Here, the Python codes for exploratory statistics were stored.
+## 📄 Abstract
 
-  davescordova-Graphs: In it, the Python and Julia codes for the graphs and the data to plot them were stored.
+Using the framework of Institutional Economics, this thesis investigates the economic development of the Brazilian state of Mato Grosso. It argues that the new institutions established since the 1960s have been pivotal in paving the way for the state's significant economic growth.
 
+---
 
-Any missing data or doubt can be adressed to daves.cordova@gmail.com.
+## 🛠️ Tools & Methodology
+
+The analysis was conducted using a **Two-Stage Least Squares (2SLS)** model on panel data with fixed effects. The primary software tools used were:
+
+* **🐍 Python**: Used for creating maps, graphs, exploratory data analysis, and data visualizations.
+    * *Key libraries: `pandas`, `geopandas`, `matplotlib`, `seaborn`, `plotly`, `esda`, `libpysal`.*
+
+* **💧 Julia**: Employed for plotting geospatial data, such as the location of federal highways in the state.
+    * *Key libraries: `GeoDataFrames`, `Plots`, `Shapefile`, `GeoJSON`, `ArchGDAL`.*
+
+* **📈 Stata**: Utilized for the core econometric regressions of the study.
+
+---
+
+## 📂 Repository Structure
+
+All files are located in the `main` branch and organized into the following directories:
+
+* `Production--Regression-Analysis`: Contains the Stata `do-files` used to perform the regression analysis.
+* `Exploratory_Statiscs/`: Contains Python scripts and Jupyter Notebooks for exploratory data analysis.
+* `Graphs/`: Contains Python and Julia code (Jupyter Notebooks) used to generate the graphs, maps, and other data visualizations for the thesis.
+
+---
+
+## 🚀 How to Replicate the Results
+
+To replicate the analysis and results, please follow the steps below.
+
+### 1. Prerequisites
+Ensure you have the following software installed:
+* Stata
+* Python 3.x (Anaconda distribution recommended)
+* Julia
+
+### 2. Clone the Repository
+Open your terminal (Git Bash, Terminal, etc.) and run the command below to download the files:
+```bash
+git clone [https://github.com/davescordova/DIFERENCES-IN-ECONOMIC-GROWTH-PATH-IN-MATO-GROSSO.git](https://github.com/davescordova/DIFERENCES-IN-ECONOMIC-GROWTH-PATH-IN-MATO-GROSSO.git)
